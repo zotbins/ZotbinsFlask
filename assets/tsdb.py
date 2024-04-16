@@ -1,3 +1,4 @@
+"""
 import env, psycopg2, psycopg2.extras
 
 def connect():
@@ -17,3 +18,4 @@ def execute_query(conn, query):
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     cursor.execute(query)
     return cursor.fetchall()
+"""
