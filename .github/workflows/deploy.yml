@@ -21,9 +21,9 @@ jobs:
         with:
           python-version: '3.9' #install the python version needed
       - name: serverless deploy
-        uses: dhollerbach/github-action-serverless-with-python-requirements@master
+        uses: serverless/github-action@master
         with:
-          args: ''
+          args: deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
