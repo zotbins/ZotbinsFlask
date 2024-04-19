@@ -21,9 +21,10 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }} #install the python version needed
-      - name: serverless deploy
-        uses: dhollerbach/github-action-serverless-with-python-requirements@master
+          python-version: 3.9 #install the python version needed
+      - name: Serverless Deploy
+        uses: dhollerbach/actions.serverless-with-python-requirements@v2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          STAGE: dev
