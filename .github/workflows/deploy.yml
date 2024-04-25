@@ -1,7 +1,11 @@
 name: deploy1
 on:
   push:
+    branches:
+      - main
   pull_request:
+    branches:
+      -main
 jobs:
   deploy:
     name: deploy
